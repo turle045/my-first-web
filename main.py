@@ -60,7 +60,7 @@ gravatar = Gravatar(app,
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URI", "postgresql://neondb_owner:npg_w3DPSgci0KBj@ep-royal-firefly-adyhbmb0-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URI")
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
